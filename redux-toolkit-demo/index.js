@@ -6,9 +6,10 @@ const fetchUsers = require('./features/user/userSlice').fetchUsers
 console.log('Initial state', store.getState());
 
 const unsubscribe = store.subscribe(() => {
-    console.log('Updated state', store.getState());
-});
+    // console.log('Updated state', store.getState());
+})
 
+console.log(fetchUsers())
 store.dispatch(fetchUsers())
 
 // store.dispatch(cakeActions.ordered())

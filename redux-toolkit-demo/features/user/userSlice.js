@@ -11,10 +11,10 @@ const initialState = {
 //Generates pending, fulfilled and rejected action types
 const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
     return axios
-                .get('https://jsonplaceholder.typicode.com/users')
-                .then(res => {
-                    res.data.map(user => user.id)
-                })
+            .get('https://jsonplaceholder.typicode.com/users')
+            .then((res) => {
+                res.data.map(user => user.id)
+            })
 })
 
 const userSlice = createSlice({
@@ -37,5 +37,6 @@ const userSlice = createSlice({
     }
 })
 
-module.exports = userSlice.reducer;
-module.exports.fetchUsers = userSlice.fetchUsers
+// console.log(fetchUsers)
+module.exports = userSlice.reducer
+module.exports.fetchUsers = fetchUsers

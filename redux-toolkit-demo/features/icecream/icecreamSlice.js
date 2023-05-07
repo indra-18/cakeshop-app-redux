@@ -9,7 +9,7 @@ const icecreamSlice = createSlice({
     name: 'icecream',
     // initialState: initialState
     initialState,
-    reducer: {
+    reducers: {
         ordered: (state) => {
             state.numOfIcecreams--
         },
@@ -22,12 +22,12 @@ const icecreamSlice = createSlice({
     //         state.numOfIcecreams--
     //     }
     // }
-    extraReducers: (builder) => {
-        builder.addCase(cakeActions.ordered, (state) => {
-            state.numOfIcecreams--
-        })
-    }
+    // extraReducers: (builder) => {
+    //     builder.addCase(cakeActions.ordered, (state) => {
+    //         state.numOfIcecreams--
+    //     })
+    // }
 })
 
-module.exports = icecreamSlice.reducer
+module.exports = icecreamSlice.reducer;
 module.exports.icecreamActions = icecreamSlice.actions
